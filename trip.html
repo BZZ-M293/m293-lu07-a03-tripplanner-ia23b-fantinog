@@ -12,7 +12,7 @@
     <fieldset>
         <legend>Abflughafen auswählen</legend>
         <label>Abflughafen:
-            <select name="Abflughafen" size="6">
+            <select name="Abflughafen" size="6" required>
                 <optgroup label="Deutschland">
                     <option label="Berlin">Berlin</option>
                     <option label="Frankfurt">Frankfurt</option>
@@ -54,22 +54,22 @@
         <label for="check3">zusätzliches Gepäck</label>
 
     </fieldset>
-    <fieldset>
+    <fieldset >
         <legend>Gewünschte Reisezeitraum</legend>
         <label for="anfangDatum">Anfangszeitpunkt</label>
-        <input id="anfangDatum" name="datumReise" type="date">
+        <input id="anfangDatum" name="datumReise" type="date" required>
 
         <label for="endeDatum">Endzeitpunkt</label>
-        <input id="endeDatum" name="datumReise" type="date">
+        <input id="endeDatum" name="datumReise" type="date" required>
 
         <label for="anzahlTage">Anzahl Tage: </label>
-        <input id="anzahlTage" name="datumReise" type="number">
+        <input id="anzahlTage" name="datumReise" type="number" required>
     </fieldset>
 
     <fieldset>
         <legend>Anzahl Personen:</legend>
         <label for="anzahlPer">Anzahl Personen: </label>
-        <input id="anzahlPer" name="anzahlPersonen" type="number">
+        <input id="anzahlPer" name="anzahlPersonen" type="number" required>
     </fieldset>
 
     <fieldset>
