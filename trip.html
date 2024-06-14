@@ -1,14 +1,112 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Reisebuchungs-Formular</title>
+    <meta charset="UTF-8">
+    <title>Reisebuchungs-Formular</title>
 
 </head>
 <body>
 
 <h1>Reisebuchungs-Formular</h1>
+<form action="https://it.bzz.ch/demo/formdata/index.php" method="post">
+    <fieldset>
+        <legend>Abflughafen auswählen</legend>
+        <label>Abflughafen:
+            <select name="Abflughafen" size="6">
+                <optgroup label="Deutschland">
+                    <option label="Berlin">Berlin</option>
+                    <option label="Frankfurt">Frankfurt</option>
+                </optgroup>
+                <optgroup label="Österreich">
+                    <option label="Wien">Wien</option>
+                    <option label="Insbrug">Insbrug</option>
+                    <option label="Bernhard">Bernhard</option>
+                </optgroup>
+                <optgroup label="Italien">
+                    <option label="Roma">Roma</option>
+                    <option label="Milano">Milano</option>
+                </optgroup>
+                <optgroup label="Frankreich">
+                    <option label="Paris">Paris</option>
+                    <option label="Lille">Lille</option>
+                </optgroup>
+            </select>
+        </label>
+    </fieldset>
 
+    <fieldset>
+        <legend>Unterkunft</legend>
+        <input type="radio" id="Hotel" name="Unterkunft" value="Hotel">
+        <label for="Hotel"> Hotel</label>
+        <input type="radio" id="Ferienwohnung" name="Unterkunft" value="Ferienwohnung">
+        <label for="Ferienwohnung"> Ferienwohnung</label>
+        <input type="radio" id="Hostel" name="Unterkunft" value="Hostel">
+        <label for="Hostel"> Hostel</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>zusätzliche Dienstleistungen</legend>
+        <input type="checkbox" name="zDienst[]" value="Reiseversicherung" id="check1" checked>
+        <label for="check1">Reiseversicherung</label>
+        <input type="checkbox" name="zDienst[]" value="Flughafentransfer" id="check2">
+        <label for="check2">Flughafentransfer</label>
+        <input type="checkbox" name="zDienst[]" value="zusätzliches Gepäck" id="check3">
+        <label for="check3">zusätzliches Gepäck</label>
+
+    </fieldset>
+    <fieldset>
+        <legend>Gewünschte Reisezeitraum</legend>
+        <label for="anfangDatum">Anfangszeitpunkt</label>
+        <input id="anfangDatum" name="datumReise" type="date">
+
+        <label for="endeDatum">Endzeitpunkt</label>
+        <input id="endeDatum" name="datumReise" type="date">
+
+        <label for="anzahlTage">Anzahl Tage: </label>
+        <input id="anzahlTage" name="datumReise" type="number">
+    </fieldset>
+
+    <fieldset>
+        <legend>Anzahl Personen:</legend>
+        <label for="anzahlPer">Anzahl Personen: </label>
+        <input id="anzahlPer" name="anzahlPersonen" type="number">
+    </fieldset>
+
+    <fieldset>
+        <legend>Fluggesellschaften:</legend>
+        <label>Fluggesellschaft:
+            <select name="fluggesellschaft" size="4">
+                <option>Swiss Air</option>
+                <option>ITA Air</option>
+                <option>Lufthansa</option>
+                <option>Ryanair</option>
+            </select>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>zusätzliche Dienstleistungen</legend>
+        <input type="checkbox" name="zDienst[]" value="Priority-Check-In" id="check4" checked>
+        <label for="check4">Priority-Check-In</label>
+        <input type="checkbox" name="zDienst[]" value="zusätzliches Handgepäck" id="check5">
+        <label for="check5">zusätzliches Handgepäck</label>
+        <input type="checkbox" name="zDienst[]" value="Mietwagen" id="check6">
+        <label for="check6">Mietwagen</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>datalist...</legend>
+    </fieldset>
+
+    <fieldset>
+        <legend>Email</legend>
+
+        <label for="email">Email: </label>
+        <input id="email" name="email" type="email">
+    </fieldset>
+    <button type='reset'>Zurücksetzen</button>
+    <button type="submit">Absenden</button>
+</form>
 
 </body>
 </html>
